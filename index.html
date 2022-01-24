@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Best Calculator</title>
 
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>Best Calculator Ever!</title>
 
-    <script src="script.js" charset="utf-8"></script>
-  </body>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="#">
+</head>
+
+<body id="body">
+  <div id="calculator">
+    <div id="screen-container">
+      <div id="screen">
+        <div id="digits-display-upper"></div>
+        <div id="digits-display-lower"></div>
+      </div>
+      <div id="screen-shadow"></div>
+    </div>
+
+    <section class="button-container">
+      <section class="top-buttons">
+        <button class="button clear left-most-buttons" onclick="playSound('standard'); clearAll()">AC</button>
+        <button class="button percent" onclick="playSound('standard'); percent()">%</button>
+        <button class="button operator" onclick="playSound('standard'); addOperator('/')">/</button>
+        <button class="button operator right-most-buttons" onclick="playSound('standard'); addOperator('*')">x</button>
+        <button class="button number left-most-buttons" onclick="playSound('standard'); addDigit('7')">7</button>
+        <button class="button number" onclick="playSound('standard'); addDigit('8')">8</button>
+        <button class="button number" onclick="playSound('standard'); addDigit('9')">9</button>
+        <button class="button operator right-most-buttons" onclick="playSound('standard'); addOperator('-')">-</button>
+        <button class="button number left-most-buttons" onclick="playSound('standard'); addDigit('4')">4</button>
+        <button class="button number" onclick="playSound('standard'); addDigit('6')">6</button>
+        <button class="button number" onclick="playSound('standard'); addDigit('5')">5</button>
+        <button class="button operator" onclick="playSound('standard'); addOperator('+')">+</button>
+      </section>
+      <section class="bottom-buttons">
+        <section class="left-buttons">
+          <button class="button number left-most-buttons" onclick="playSound('standard'); addDigit('1')">1</button>
+          <button class="button number right-most-buttons" onclick="playSound('standard'); addDigit('2')">2</button>
+          <button id="zero" class="button number left-most-buttons" onclick="playSound('zero'); addDigit('0')">0</button>
+        </section>
+        <section class="right-buttons">
+          <button class="button number left-most-buttons" onclick="playSound('standard'); addDigit('3')">3</button>
+          <button class="button left-most-buttons" onclick="playSound('standard'); addDecimal()">.</button>
+          <button id="equals-sign" class="button equals" onclick="playSound('equals'); equalsClick()">=</button>
+        </section>
+      </section>
+    </section>
+  </div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+
 </html>

@@ -1,0 +1,169 @@
+@font-face {
+  font-family: digital;
+  src: url(fonts/digital-7/digital-7.ttf);
+}
+
+@font-face {
+  font-family: droid-mono;
+  src: url(fonts/droid-sans-mono/DroidSansMono.ttf);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(210, 248, 250);
+  z-index: 5;
+}
+
+#calculator {
+  width: 362px;
+  height: 586.8px;
+  background-color: rgb(93, 93, 93);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  padding: 5px 7px;
+  filter: drop-shadow(2px 15px 12px grey);
+  border: 10px solid #fafafa;
+}
+
+#screen-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 352px;
+  height: 110px;
+  border-width: 3px 7px 10px;
+  border-style: solid;
+  background: #fafafa;
+  border-color: #eeeeee #e0e0e0 #c2c2c2;
+  border-radius: 4px;
+}
+
+#screen {
+  font-family: digital;
+  background-color: rgb(201, 215, 205);
+  width: 338px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+#screen-shadow {
+  width: 330px;
+  height: 92px;
+  border-radius: 4px;
+  position: absolute;
+  border: 4px inset rgba(0, 0, 0, 0.05);
+}
+
+#digits-display-upper {
+  width: 335px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 27px;
+  opacity: .7;
+  padding: 0px;
+  margin: 0px;
+}
+
+#digits-display-lower {
+  width: 335px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 60px;
+  opacity: .7;
+}
+
+.button-container {
+  width: 366px;
+  height: 460px;
+}
+
+.top-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bottom-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.left-buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 183px;
+}
+
+.right-buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 183px;
+  height: 186px;
+  margin-left: 5px;
+}
+
+.button {
+  font-family: droid-mono;
+  font-size: 21px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 87.7656211853027272px;
+  height: 87.7656211853027272px;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 7px;
+  background: #fafafa;
+  border-color: #eeeeee #e0e0e0 #c2c2c2;
+  border-width: 3px 7px 10px;
+  border-style: solid;
+  border-radius: 4px;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+}
+
+.button:active {
+  -webkit-transform: scale(0.93, 0.93);
+  -moz-transform: scale(0.93, 0.93);
+  -ms-transform: scale(0.93, 0.93);
+  -o-transform: scale(0.93, 0.93);
+  transform: scale(0.93, 0.93);
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.left-most-buttons {
+  margin-left: 0px;
+}
+
+.right-most-buttons {
+  margin-right: 0px;
+}
+
+#zero {
+  width: calc((87.7656211853027272px * 2) + 5px);
+  height: 87px;
+}
+
+#equals-sign {
+  width: 87.7656211853027272px;
+  height: calc((87.7656211853027272px * 2) + 5px);
+}
